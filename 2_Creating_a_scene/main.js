@@ -1,4 +1,4 @@
-import * as THREE from 'three'
+import * as THREE from '../node_modules/three/build/three.module.js'
 
 const scene = new THREE.Scene()
 // PerspectiveCamera
@@ -19,6 +19,7 @@ scene.add( cube )
 camera.position.z = 5
 
 function animate() {
+    // 1초에 60번 렌더링
     requestAnimationFrame( animate )
 
     // 큐브 회전
