@@ -2,7 +2,7 @@ import * as THREE from '../node_modules/three/build/three.module.js'
 
 const scene = new THREE.Scene()
 // PerspectiveCamera
-// pov: 시야각, aspect: 화면 비율, near: 카메라 계산하는 최소 거리, far: 카메라가 계산하는 최대 거리
+// Fov: 시야각(해당 시점의 화면이 보여지는 정도), aspect: 화면 비율, near: 카메라 계산하는 최소 거리, far: 카메라가 계산하는 최대 거리
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 )
 
 const renderer = new THREE.WebGLRenderer()
@@ -23,8 +23,9 @@ function animate() {
     requestAnimationFrame( animate )
 
     // 큐브 회전
-    cube.rotation.x += 0.01
-    cube.rotation.y += 0.01
+    cube.rotation.x += 0.07
+    cube.rotation.y += 0.07
+    cube.rotation.z += 0.07
 
     renderer.render( scene, camera )
 }
